@@ -1,0 +1,20 @@
+{
+  "name": "Stories Lounge Dubai",
+  "short_name": "Stories Lounge",
+  "description": "Rooftop dining, lounge bar & cafe in Meena Bazaar, Dubai — creek views, fusion cuisine, cocktails & shisha.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "lang": "en-AE",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle", "entertainment"]
+}
