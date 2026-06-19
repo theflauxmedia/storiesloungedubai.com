@@ -6,10 +6,10 @@ import SectionHeader from '../components/SectionHeader'
 import { ImageCard } from '../components/MediaImage'
 
 const eventMeta = [
-  { title: 'DJ Nights', label: 'DJ Nights — Live Sets', index: 4 },
-  { title: 'Quiz & Theme Evenings', label: 'Quiz & Theme Evenings', index: 7 },
-  { title: 'Festive & Holiday Events', label: 'Festive & Holiday Events', index: 10 },
-  { title: 'Corporate & Social Mixers', label: 'Corporate & Social Mixers', index: 13 },
+  { title: 'DJ Nights', index: 0 },
+  { title: 'Quiz & Theme Evenings', index: 4 },
+  { title: 'Festive & Holiday Events', index: 9 },
+  { title: 'Corporate & Social Mixers', index: 14 },
 ]
 
 const eventTypeOptions = [
@@ -31,7 +31,7 @@ const containerVariants = {
 }
 
 const Events = () => {
-  const [ambianceImages, setAmbianceImages] = useState([])
+  const [eventImages, setEventImages] = useState([])
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -45,13 +45,13 @@ const Events = () => {
 
   useEffect(() => {
     import('../data/galleryManifest').then((m) => {
-      setAmbianceImages(m.getImages('ambiance'))
+      setEventImages(m.getImages('events'))
     })
   }, [])
 
   const eventTypes = eventMeta.map((event) => ({
     ...event,
-    image: ambianceImages[event.index],
+    image: eventImages[event.index],
   }))
 
   usePageMeta({
@@ -90,30 +90,32 @@ const Events = () => {
         </motion.div>
       </motion.section>
 
-      <motion.section
-        className="section section--charcoal events-grid-section"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <div className="container">
-          <motion.div className="events-grid">
-            {eventTypes.map(
-              (event) =>
-                event.image && (
-                  <motion.div key={event.title} variants={sectionVariants}>
-                    <ImageCard
-                      item={event.image}
-                      overlayTitle={event.title}
-                      className="event-card"
-                    />
-                  </motion.div>
-                )
-            )}
-          </motion.div>
-        </div>
-      </motion.section>
+      {eventTypes.some((event) => event.image) && (
+        <motion.section
+          className="section section--charcoal events-grid-section"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <div className="container">
+            <motion.div className="events-grid">
+              {eventTypes.map(
+                (event) =>
+                  event.image && (
+                    <motion.div key={event.title} variants={sectionVariants}>
+                      <ImageCard
+                        item={event.image}
+                        overlayTitle={event.title}
+                        className="event-card"
+                      />
+                    </motion.div>
+                  )
+              )}
+            </motion.div>
+          </div>
+        </motion.section>
+      )}
 
       <motion.section
         className="section section--purple private-bookings"
@@ -126,7 +128,7 @@ const Events = () => {
           <SectionHeader
             label="Private Events"
             title="Host Your Story With Us"
-            subtitle="Celebrate birthdays, corporate gatherings, anniversaries, or private parties in a stylish rooftop setting with custom menus and personalized service."
+            subtitle="Celebrate birthdays, corporate gatherings, anniversaries, or private parties in a stylish Rooftop Creekview setting with custom menus and personalized service."
             as="h2"
           />
         </motion.div>

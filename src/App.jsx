@@ -9,7 +9,7 @@ import MobileReserveBar from './components/MobileReserveBar'
 import StructuredData from './components/StructuredData'
 import Home from './pages/Home'
 import About from './pages/About'
-import Menu from './pages/Menu'
+import MenuRedirect from './pages/MenuRedirect'
 import Events from './pages/Events'
 import Contact from './pages/Contact'
 import GalleryPage from './pages/GalleryPage'
@@ -39,14 +39,7 @@ function AppRoutes() {
               </PageTransition>
             }
           />
-          <Route
-            path="/menu"
-            element={
-              <PageTransition>
-                <Menu />
-              </PageTransition>
-            }
-          />
+          <Route path="/menu" element={<MenuRedirect />} />
           <Route
             path="/events"
             element={

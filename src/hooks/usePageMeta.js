@@ -55,7 +55,7 @@ export const usePageMeta = ({
     upsertMeta('name', 'bingbot', 'index,follow')
 
     upsertMeta('name', 'geo.region', 'AE-DU')
-    upsertMeta('name', 'geo.placename', 'Dubai, Meena Bazaar')
+    upsertMeta('name', 'geo.placename', `Dubai, ${SITE.area}`)
     upsertMeta('name', 'geo.position', `${SITE.geo.lat};${SITE.geo.lng}`)
     upsertMeta('name', 'ICBM', `${SITE.geo.lat}, ${SITE.geo.lng}`)
 
@@ -75,13 +75,13 @@ export const usePageMeta = ({
     upsertMeta('property', 'og:image:type', SITE.ogImageType)
     upsertMeta('property', 'og:image:width', String(SITE.ogImageWidth))
     upsertMeta('property', 'og:image:height', String(SITE.ogImageHeight))
-    upsertMeta('property', 'og:image:alt', `${SITE.name} — Premium rooftop dining in Meena Bazaar, Dubai`)
+    upsertMeta('property', 'og:image:alt', `${SITE.name} — Premium Rooftop Creekview dining in ${SITE.area}, Dubai`)
 
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('name', 'twitter:title', fullTitle)
     upsertMeta('name', 'twitter:description', description)
     upsertMeta('name', 'twitter:image', ogImageUrl)
-    upsertMeta('name', 'twitter:image:alt', `${SITE.name} — Premium rooftop dining in Meena Bazaar, Dubai`)
+    upsertMeta('name', 'twitter:image:alt', `${SITE.name} — Premium Rooftop Creekview dining in ${SITE.area}, Dubai`)
 
     if (breadcrumb?.length) {
       const breadcrumbSchema = {

@@ -1,11 +1,15 @@
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { PAGES } from '../config/seo'
 import SectionHeader from '../components/SectionHeader'
-import { FeaturedImage, ImageStrip } from '../components/MediaImage'
+import { FeaturedImage } from '../components/MediaImage'
 
 const luxuryEase = [0.22, 1, 0.36, 1]
+
+const aboutStoryImage = {
+  src: '/images/ambiance/DSC07596.webp',
+  alt: 'Ambience at Stories Lounge Dubai',
+}
 
 const philosophy = [
   'Crafted menus using premium ingredients',
@@ -25,8 +29,6 @@ const containerVariants = {
 }
 
 const About = () => {
-  const [ambianceImages, setAmbianceImages] = useState([])
-
   usePageMeta({
     ...PAGES.about,
     breadcrumb: [
@@ -34,12 +36,6 @@ const About = () => {
       { name: 'About', path: '/about' },
     ],
   })
-
-  useEffect(() => {
-    import('../data/galleryManifest').then((m) => {
-      setAmbianceImages(m.getImages('ambiance'))
-    })
-  }, [])
 
   return (
     <main className="about">
@@ -50,24 +46,22 @@ const About = () => {
         viewport={{ once: true }}
         variants={sectionVariants}
       >
-        <motion.div className="container">
+        <motion.div className="container about-story__intro">
           <span className="section-header__label page-eyebrow">About Us</span>
           <h1>Our Story</h1>
           <p className="about-story__text">
-            Located atop the Concorde Creek View Hotel, Stories Lounge is a rooftop destination
+            Located atop the Concorde Creek View Hotel, Stories Lounge is a Rooftop Creekview destination
             where food, music, views, and people come together. Inspired by global dining
             cultures and Dubai&apos;s vibrant nightlife, we offer a relaxed yet refined space
             designed for social experiences that flow effortlessly from day to night.
           </p>
-        </motion.div>
-        {ambianceImages[0] && (
           <FeaturedImage
-            item={ambianceImages[0]}
+            item={aboutStoryImage}
             className="about-story__image"
             aspectRatio="21/9"
             priority
           />
-        )}
+        </motion.div>
       </motion.section>
 
       <motion.section
@@ -101,17 +95,23 @@ const About = () => {
         viewport={{ once: true }}
         variants={sectionVariants}
       >
-        <div className="container">
+        <div className="container the-space__inner">
           <SectionHeader
             label="The Space"
             title="Designed for Moments"
             subtitle="From intimate seating to open social tables, Stories Lounge adapts seamlessly to every mood — relaxed afternoons, golden-hour sunsets, or lively late nights."
             as="h2"
           />
+          <motion.img
+            src="/logo.png"
+            alt="Stories Lounge Bar · Cafe Dubai"
+            className="the-space__logo"
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.85, ease: luxuryEase }}
+          />
         </div>
-        {ambianceImages.length > 0 && (
-          <ImageStrip items={ambianceImages} className="the-space__strip" />
-        )}
       </motion.section>
     </main>
   )

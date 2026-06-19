@@ -18,39 +18,39 @@ const H = 630
 const PAGES = [
   {
     file: 'default.jpg',
-    hero: 'images/Hero/1.webp',
+    hero: 'images/Hero/001.webp',
     title: 'Stories Lounge Dubai',
-    subtitle: 'Rooftop Dining & Lounge Bar · Meena Bazaar',
+    subtitle: 'Rooftop Creekview Dining & Lounge Bar · Al Fahidi',
   },
   {
     file: 'home.jpg',
-    hero: 'images/Hero/3.webp',
+    hero: 'images/Hero/003.webp',
     title: 'Stories Lounge Dubai',
-    subtitle: 'Rooftop Dining · Dubai Creek Views',
+    subtitle: 'Rooftop Creekview Dining · Dubai Creek Views',
   },
   {
     file: 'about.jpg',
-    hero: 'images/Hero/7.webp',
+    hero: 'images/Hero/007.webp',
     title: 'About Stories Lounge',
-    subtitle: 'Rooftop Moments Above Dubai Creek',
+    subtitle: 'Rooftop Creekview Moments Above Dubai Creek',
   },
   {
     file: 'menu.jpg',
-    hero: 'images/Hero/5.webp',
+    hero: 'images/Hero/005.webp',
     title: 'Our Menu',
     subtitle: 'Fusion Food · Cocktails · Shisha',
   },
   {
     file: 'events.jpg',
-    hero: 'images/Hero/9.webp',
+    hero: 'images/events/009.webp',
     title: 'Events & Entertainment',
-    subtitle: 'DJ Nights · Private Rooftop Bookings',
+    subtitle: 'DJ Nights · Private Rooftop Creekview Bookings',
   },
   {
     file: 'contact.jpg',
-    hero: 'images/Hero/11.webp',
+    hero: 'images/Hero/011.webp',
     title: 'Reserve Your Table',
-    subtitle: 'Meena Bazaar · Open Daily 12 PM – 4 AM',
+    subtitle: 'Al Fahidi · Open Daily 12 PM – 4 AM',
   },
 ]
 

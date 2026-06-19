@@ -6,39 +6,39 @@ const SITE_URL = 'https://storiesloungedubai.com'
 
 const ROUTE_META = {
   '/': {
-    title: 'Stories Lounge Dubai | Rooftop Restaurant & Lounge Bar — Meena Bazaar',
+    title: 'Stories Lounge Dubai | Rooftop Creekview Restaurant & Lounge Bar — Al Fahidi',
     description:
-      'Premium rooftop dining in Meena Bazaar, Dubai. Global fusion cuisine, cocktails, shisha & Dubai Creek skyline views at Stories Lounge.',
+      'Premium Rooftop Creekview dining in Al Fahidi, Dubai. Global fusion cuisine, cocktails, shisha & Dubai Creek skyline views at Stories Lounge.',
     image: '/og/home.jpg',
   },
   '/about': {
-    title: 'About Stories Lounge Dubai | Rooftop Lounge & Dining Experience',
+    title: 'About Stories Lounge Dubai | Rooftop Creekview Lounge & Dining Experience',
     description:
-      'Our story at Stories Lounge Dubai — rooftop destination in Meena Bazaar blending global cuisine, music, creek views & Dubai nightlife.',
+      'Our story at Stories Lounge Dubai — Rooftop Creekview destination in Al Fahidi blending global cuisine, music, creek views & Dubai nightlife.',
     image: '/og/about.jpg',
   },
   '/menu': {
     title: 'Menu | Stories Lounge Dubai — Fusion Food, Cocktails & Shisha',
     description:
-      'Stories Lounge Dubai menu: fusion starters, signature mains, craft cocktails & premium shisha. Rooftop dining in Meena Bazaar.',
+      'Stories Lounge Dubai menu: fusion starters, signature mains, craft cocktails & premium shisha. Rooftop Creekview dining in Al Fahidi.',
     image: '/og/menu.jpg',
   },
   '/gallery': {
-    title: 'Gallery | Stories Lounge Dubai — Rooftop Photos & Experience',
+    title: 'Gallery | Stories Lounge Dubai — Rooftop Creekview Photos & Experience',
     description:
-      'Explore Stories Lounge Dubai in photos — rooftop ambience, signature dishes, cocktails, shisha, and evenings above Dubai Creek.',
+      'Explore Stories Lounge Dubai in photos — Rooftop Creekview ambience, signature dishes, cocktails, shisha, and evenings above Dubai Creek.',
     image: '/og/about.jpg',
   },
   '/events': {
     title: 'Events & DJ Nights | Stories Lounge Dubai',
     description:
-      'DJ nights, themed evenings & private rooftop bookings at Stories Lounge Dubai — birthdays, corporate events & celebrations.',
+      'DJ nights, themed evenings & private Rooftop Creekview bookings at Stories Lounge Dubai — birthdays, corporate events & celebrations.',
     image: '/og/events.jpg',
   },
   '/contact': {
-    title: 'Reserve a Table | Stories Lounge Dubai — Meena Bazaar',
+    title: 'Reserve a Table | Stories Lounge Dubai — Al Fahidi',
     description:
-      'Book your table at Stories Lounge Dubai. Rooftop, Concorde Creek View Hotel, Meena Bazaar. Open daily 12 PM–4 AM. Call +971 56 469 8414.',
+      'Book your table at Stories Lounge Dubai. Rooftop Creekview - Concorde Creek View Hotel, Al Souq Al Kabeer - Al Fahidi - Dubai. Open daily 12 PM–4 AM. Call +971 50 549 9410.',
     image: '/og/contact.jpg',
   },
 }

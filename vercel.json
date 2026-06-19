@@ -1,3 +1,10 @@
 {
+  "redirects": [
+    {
+      "source": "/menu",
+      "destination": "https://qr.mydigimenu.com/b9b1e898-7b11-4d3f-928a-352e20247cc8",
+      "permanent": false
+    }
+  ],
   "rewrites": [{ "source": "/((?!assets|images|og|logo\\.png|robots\\.txt|sitemap\\.xml|llms\\.txt|manifest\\.webmanifest).*)", "destination": "/index.html" }]
 }

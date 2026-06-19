@@ -37,7 +37,7 @@ const buildSchemaGraph = () => ({
       url: SITE.url,
       name: SITE.name,
       description:
-        'Premium rooftop dining, lounge bar and cafe in Meena Bazaar, Dubai with Dubai Creek skyline views.',
+        `Premium Rooftop Creekview dining, lounge bar and cafe in ${SITE.area}, Dubai with Dubai Creek skyline views.`,
       publisher: { '@id': `${SITE.url}/#organization` },
       inLanguage: 'en-AE',
       potentialAction: {
@@ -60,9 +60,9 @@ const buildSchemaGraph = () => ({
       '@type': ['Restaurant', 'BarOrPub', 'NightClub'],
       '@id': `${SITE.url}/#restaurant`,
       name: SITE.name,
-      alternateName: ['Stories Lounge', 'Stories Lounge Meena Bazaar'],
+      alternateName: ['Stories Lounge', `Stories Lounge ${SITE.area}`],
       description:
-        'Rooftop dining and lounge bar cafe atop Concorde Creek View Hotel in Meena Bazaar, Dubai. Global fusion cuisine, handcrafted cocktails, premium shisha, DJ nights and Dubai Creek skyline views.',
+        `Rooftop Creekview dining and lounge bar cafe atop Concorde Creek View Hotel in ${SITE.area}, Dubai. Global fusion cuisine, handcrafted cocktails, premium shisha, DJ nights and Dubai Creek skyline views.`,
       url: SITE.url,
       telephone: SITE.phone,
       email: SITE.email,
@@ -77,9 +77,9 @@ const buildSchemaGraph = () => ({
         'Fusion',
         'Middle Eastern',
       ],
-      menu: `${SITE.url}/menu`,
+      menu: SITE.digitalMenu,
       acceptsReservations: true,
-      hasMenu: `${SITE.url}/menu`,
+      hasMenu: SITE.digitalMenu,
       address: {
         '@type': 'PostalAddress',
         streetAddress: SITE.address.street,
@@ -109,21 +109,21 @@ const buildSchemaGraph = () => ({
         },
       ],
       amenityFeature: [
-        { '@type': 'LocationFeatureSpecification', name: 'Rooftop seating', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'Rooftop Creekview seating', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Skyline view', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Shisha', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Live music', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Private dining', value: true },
       ],
       keywords:
-        'rooftop restaurant Dubai, lounge bar Dubai, Meena Bazaar, Dubai Creek views, shisha Dubai, fusion dining',
+        `Rooftop Creekview restaurant Dubai, lounge bar Dubai, ${SITE.area}, Dubai Creek views, shisha Dubai, fusion dining`,
       parentOrganization: {
         '@type': 'Hotel',
         name: 'Concorde Creek View Hotel',
       },
       isPartOf: {
         '@type': 'Place',
-        name: 'Meena Bazaar, Bur Dubai',
+        name: `${SITE.area}, Dubai`,
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Dubai',

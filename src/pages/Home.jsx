@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { usePageMeta } from '../hooks/usePageMeta'
-import { PAGES } from '../config/seo'
+import { PAGES, SITE } from '../config/seo'
 import SectionHeader from '../components/SectionHeader'
 import HeroSlider from '../components/HeroSlider'
 import GalleryPreview from '../components/GalleryPreview'
@@ -10,12 +10,17 @@ import { FeaturedImage } from '../components/MediaImage'
 
 const heroWords = ['Stories', 'Lounge']
 
+const experiencePreviewImage = {
+  src: '/images/Hero/012.webp',
+  alt: 'Stories Lounge Dubai Rooftop Creekview experience',
+}
+
 const brandSnapshot = [
   {
     icon: '◈',
-    title: 'Rooftop Views',
+    title: 'Panoramic Rooftop Creek View',
     description:
-      'Enjoy breathtaking creek and city skyline views from our elevated rooftop setting.',
+      'Enjoy breathtaking creek and city skyline panoramas from our elevated setting.',
   },
   {
     icon: '◆',
@@ -26,7 +31,8 @@ const brandSnapshot = [
   {
     icon: '✦',
     title: 'Social Evenings',
-    description: 'Live DJs, themed nights, shisha, and handcrafted beverages.',
+    description:
+      'Enjoy fun-filled evenings with Bollywood Quiz Nights, Housie Nights, and Live Performances every week at Stories.',
   },
 ]
 
@@ -42,17 +48,23 @@ const weeklyHighlights = [
     day: 'Fri – Sun',
     time: 'Elevated music, crowd energy & signature cocktails',
   },
+  {
+    name: 'Celebratory Stories',
+    day: 'Special Occasions',
+    time:
+      "From birthdays and anniversaries to date nights and special occasions, celebrate life's memorable moments at Stories.",
+  },
 ]
 
 const testimonials = [
   {
     quote:
-      'Absolutely stunning rooftop views at sunset. The cocktails were incredible and the vibe was perfect for a date night. Will definitely be back!',
+      'Absolutely stunning rooftop creek views at sunset. The cocktails were incredible and the vibe was perfect for a date night. Will definitely be back!',
     name: 'Sarah M.',
   },
   {
     quote:
-      'Best shisha in Meena Bazaar area. Food was amazing — try the butter chicken bites. Staff were super friendly and the DJ set on Friday was fire.',
+      'Best shisha in the Al Fahidi area. Food was amazing — try the butter chicken bites. Staff were super friendly and the DJ set on Friday was fire.',
     name: 'Ahmed K.',
   },
   {
@@ -90,7 +102,6 @@ const cardVariants = {
 const Home = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
-  const [ambianceImages, setAmbianceImages] = useState([])
   const heroRef = useRef(null)
 
   const { scrollYProgress } = useScroll({
@@ -113,12 +124,6 @@ const Home = () => {
     update()
     mq.addEventListener('change', update)
     return () => mq.removeEventListener('change', update)
-  }, [])
-
-  useEffect(() => {
-    import('../data/galleryManifest').then((m) => {
-      setAmbianceImages(m.getImages('ambiance'))
-    })
   }, [])
 
   useEffect(() => {
@@ -147,7 +152,7 @@ const Home = () => {
           className="hero__content"
           style={isMobile ? undefined : { opacity: heroOpacity }}
         >
-          <p className="hero__eyebrow">Meena Bazaar · Dubai</p>
+          <p className="hero__eyebrow">Al Fahidi - Dubai - United Arab Emirates</p>
 
           <h1 className="hero__title">
             {heroWords.map((word, i) => (
@@ -169,7 +174,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.65, ease: luxuryEase }}
           >
-            <em>Rooftop Dining &amp; Lounge Experience in Dubai</em>
+            <em>Bengaluru’s First Luxury Lounge &amp; Bar Brand Now in Dubai</em>
           </motion.p>
 
           <motion.p
@@ -194,9 +199,19 @@ const Home = () => {
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Link to="/menu" className="btn btn--outline">
+              <a href={SITE.digitalMenu} className="btn btn--outline">
                 View Menu
-              </Link>
+              </a>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+              <a
+                href={SITE.instagram}
+                className="btn btn--outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Follow Us
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -214,7 +229,7 @@ const Home = () => {
         <div className="container">
           <SectionHeader
             label="The Destination"
-            title="Three Reasons to Visit"
+            title="What Makes Us Special"
             as="h2"
             id="brand-snapshot-heading"
           />
@@ -273,13 +288,11 @@ const Home = () => {
             className="experience-preview__media"
             variants={sectionVariants}
           >
-            {(ambianceImages[2] || ambianceImages[0]) && (
-              <FeaturedImage
-                item={ambianceImages[2] || ambianceImages[0]}
-                className="experience-preview__img"
-                aspectRatio="4/5"
-              />
-            )}
+            <FeaturedImage
+              item={experiencePreviewImage}
+              className="experience-preview__img"
+              aspectRatio="4/5"
+            />
           </motion.div>
         </motion.div>
       </motion.section>
@@ -294,24 +307,26 @@ const Home = () => {
       >
         <motion.div className="container">
           <SectionHeader label="This Week" title="What's Happening at Stories" as="h2" />
-          <div className="highlights__scroll" role="list">
+          <div className="highlights__grid" role="list">
             {weeklyHighlights.map((event, i) => (
               <motion.article
                 key={event.name}
                 className="highlight-card"
                 role="listitem"
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: i * 0.12, ease: luxuryEase }}
-                whileHover={{ y: -4 }}
+                transition={{ duration: 0.8, delay: i * 0.1, ease: luxuryEase }}
+                whileHover={{ y: -3 }}
               >
                 <span className="highlight-card__index" aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="highlight-card__name">{event.name}</h3>
-                <p className="highlight-card__day">{event.day}</p>
-                <p className="highlight-card__time">{event.time}</p>
+                <div className="highlight-card__body">
+                  <h3 className="highlight-card__name">{event.name}</h3>
+                  <p className="highlight-card__day">{event.day}</p>
+                  <p className="highlight-card__time">{event.time}</p>
+                </div>
               </motion.article>
             ))}
           </div>
@@ -335,7 +350,7 @@ const Home = () => {
           <SectionHeader
             label="Visual Journey"
             title="The Stories Experience"
-            subtitle="Rooftop ambience, signature dishes, handcrafted cocktails, and evenings above Dubai Creek."
+            subtitle="Rooftop Creekview ambience, signature dishes, handcrafted cocktails, and evenings above Dubai Creek."
             as="h2"
             id="gallery-heading"
           />

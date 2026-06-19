@@ -35,7 +35,7 @@ const GalleryPage = () => {
           <h1>Gallery</h1>
           <span className="section-header__divider" aria-hidden="true" />
           <p className="gallery-page__intro-text">
-            Rooftop ambience, signature dishes, handcrafted cocktails, shisha, and evenings above
+            Rooftop Creekview ambience, signature dishes, handcrafted cocktails, shisha, and evenings above
             Dubai Creek — explore the full Stories Lounge experience.
           </p>
         </div>

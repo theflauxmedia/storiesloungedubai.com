@@ -9,7 +9,14 @@ const ROOT_MARGIN = '280px 0px'
 
 const ALL_TAB = { key: 'all', label: 'All' }
 
-function GalleryTile({ item, aspectClass, onOpen }) {
+function getTileAspectStyle(item) {
+  if (item.width && item.height) {
+    return { aspectRatio: `${item.width} / ${item.height}` }
+  }
+  return { aspectRatio: '1 / 1' }
+}
+
+function GalleryTile({ item, onOpen }) {
   const ref = useRef(null)
   const [shouldLoad, setShouldLoad] = useState(false)
 
@@ -38,7 +45,7 @@ function GalleryTile({ item, aspectClass, onOpen }) {
       className="gallery__item"
       onClick={() => onOpen(item)}
     >
-      <div className={`gallery__item-media ${aspectClass}`}>
+      <div className="gallery__item-media" style={getTileAspectStyle(item)}>
         {shouldLoad ? (
           <img
             src={item.src}
@@ -46,8 +53,8 @@ function GalleryTile({ item, aspectClass, onOpen }) {
             loading="lazy"
             decoding="async"
             draggable={false}
-            width={400}
-            height={500}
+            width={item.width ?? undefined}
+            height={item.height ?? undefined}
           />
         ) : (
           <span className="gallery__item-skeleton" aria-hidden="true" />
@@ -125,6 +132,8 @@ const Gallery = ({
         categoryLabel: '',
         alt: '',
         src: '',
+        width: i % 3 === 0 ? 4 : i % 3 === 1 ? 3 : 5,
+        height: i % 3 === 0 ? 5 : i % 3 === 1 ? 4 : 3,
       })),
       columnCount
     ),
@@ -169,14 +178,14 @@ const Gallery = ({
     >
       {columns.map((column, colIndex) => (
         <div className="gallery__column" key={skeleton ? `ph-col-${colIndex}` : `col-${colIndex}`}>
-          {column.items.map(({ item, aspectClass }) =>
+          {column.items.map(({ item }) =>
             skeleton ? (
               <div
                 key={item.id}
                 className="gallery__item gallery__item--skeleton-only"
                 aria-hidden="true"
               >
-                <div className={`gallery__item-media ${aspectClass}`}>
+                <div className="gallery__item-media" style={getTileAspectStyle(item)}>
                   <span className="gallery__item-skeleton" />
                 </div>
               </div>
@@ -184,7 +193,6 @@ const Gallery = ({
               <GalleryTile
                 key={item.id}
                 item={item}
-                aspectClass={aspectClass}
                 onOpen={openLightbox}
               />
             )

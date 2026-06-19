@@ -60,7 +60,7 @@ const menuCategories = [
   },
   {
     id: 'cocktails',
-    label: 'Cocktails & Beverages',
+    label: 'Cocktails',
     dishes: [
       { name: 'Stories Sunset', desc: 'Passion fruit, Aperol, prosecco, and a hint of rose water.', type: 'V' },
       { name: 'Creek View Old Fashioned', desc: 'Bourbon, date syrup, and aromatic bitters.', type: 'V' },
@@ -202,7 +202,7 @@ const Menu = () => {
           <SectionHeader
             label="From Our Kitchen & Bar"
             title="A Taste of Stories"
-            subtitle="Explore our dishes, cocktails, shisha, and wings — each plate and pour crafted for rooftop evenings in Dubai."
+            subtitle="Explore our dishes, cocktails, shisha, and wings — each plate and pour crafted for Rooftop Creekview evenings in Dubai."
             as="h2"
           />
           <Suspense fallback={<div className="gallery gallery--loading" aria-hidden="true" />}>
