@@ -7,6 +7,7 @@ import SectionHeader from '../components/SectionHeader'
 import HeroSlider from '../components/HeroSlider'
 import GalleryPreview from '../components/GalleryPreview'
 import { FeaturedImage } from '../components/MediaImage'
+import { reserveTableWhatsAppUrl } from '../utils/whatsapp'
 
 const heroWords = ['Stories', 'Lounge']
 
@@ -37,16 +38,16 @@ const brandSnapshot = [
 ]
 
 const weeklyHighlights = [
-  { name: 'Happy Hours', day: 'Daily', time: 'Drink & bite specials' },
+  { name: 'Happy Hours', day: 'Daily', time: 'Sheesha combos, beer bucket offers & bites special' },
   {
     name: 'Themed Nights',
     day: 'Weekly',
-    time: 'DJ Nights, Quiz Nights, Bollywood & Lounge Sessions',
+    time: 'DJ Nights, Quiz Nights, Bollywood & Housie Nights, Lounge Sessions',
   },
   {
     name: 'Weekend Vibes',
     day: 'Fri – Sun',
-    time: 'Elevated music, crowd energy & signature cocktails',
+    time: 'Elevated music, live performances, crowd energy & signature cocktails',
   },
   {
     name: 'Celebratory Stories',
@@ -194,12 +195,22 @@ const Home = () => {
             transition={{ duration: 0.85, delay: 0.95, ease: luxuryEase }}
           >
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Link to="/contact" className="btn btn--primary btn--shimmer">
+              <a
+                href={reserveTableWhatsAppUrl}
+                className="btn btn--primary btn--shimmer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Reserve a Table
-              </Link>
+              </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <a href={SITE.digitalMenu} className="btn btn--outline">
+              <a
+                href={SITE.digitalMenu}
+                className="btn btn--outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View Menu
               </a>
             </motion.div>
@@ -306,7 +317,7 @@ const Home = () => {
         aria-labelledby="highlights-heading"
       >
         <motion.div className="container">
-          <SectionHeader label="This Week" title="What's Happening at Stories" as="h2" />
+          <SectionHeader label="This Week" title="What's Happening at Stories" as="h2" id="highlights-heading" />
           <div className="highlights__grid" role="list">
             {weeklyHighlights.map((event, i) => (
               <motion.article
@@ -367,7 +378,7 @@ const Home = () => {
         aria-labelledby="testimonials-heading"
       >
         <motion.div className="container testimonials__inner">
-          <SectionHeader label="Social Proof" title="Loved by Our Guests" as="h2" />
+          <SectionHeader label="Social Proof" title="Loved by Our Guests" as="h2" id="testimonials-heading" />
           <motion.div className="testimonials__carousel" layout>
             <motion.blockquote
               key={activeTestimonial}
@@ -415,9 +426,14 @@ const Home = () => {
             Join us atop Concorde Creek View for an evening of flavour, music, and skyline views.
           </p>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-            <Link to="/contact" className="btn btn--primary btn--shimmer btn--lg">
+            <a
+              href={reserveTableWhatsAppUrl}
+              className="btn btn--primary btn--shimmer btn--lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Reserve Now
-            </Link>
+            </a>
           </motion.div>
         </div>
       </motion.section>

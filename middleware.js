@@ -27,18 +27,18 @@ const ROUTE_META = {
     title: 'Gallery | Stories Lounge Dubai — Rooftop Creekview Photos & Experience',
     description:
       'Explore Stories Lounge Dubai in photos — Rooftop Creekview ambience, signature dishes, cocktails, shisha, and evenings above Dubai Creek.',
-    image: '/og/about.jpg',
+    image: '/og/home.jpg',
   },
   '/events': {
-    title: 'Events & DJ Nights | Stories Lounge Dubai',
+    title: 'Events, DJ Nights & Housie Nights | Stories Lounge Dubai',
     description:
-      'DJ nights, themed evenings & private Rooftop Creekview bookings at Stories Lounge Dubai — birthdays, corporate events & celebrations.',
+      'DJ nights, Housie nights, themed evenings & private Rooftop Creekview bookings at Stories Lounge Dubai — birthdays, corporate events & celebrations.',
     image: '/og/events.jpg',
   },
   '/contact': {
-    title: 'Reserve a Table | Stories Lounge Dubai — Al Fahidi',
+    title: 'Reserve a Table | Stories Lounge Dubai — WhatsApp Booking',
     description:
-      'Book your table at Stories Lounge Dubai. Rooftop Creekview - Concorde Creek View Hotel, Al Souq Al Kabeer - Al Fahidi - Dubai. Open daily 12 PM–4 AM. Call +971 50 549 9410.',
+      'Book your table at Stories Lounge Dubai via WhatsApp. Rooftop Creekview - Concorde Creek View Hotel, Al Fahidi, Dubai. Open daily 12 PM–4 AM. Call +971 50 549 9410.',
     image: '/og/contact.jpg',
   },
 }

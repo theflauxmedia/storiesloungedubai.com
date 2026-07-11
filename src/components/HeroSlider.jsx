@@ -9,14 +9,16 @@ const luxuryEase = [0.22, 1, 0.36, 1]
 const HeroSlider = ({ style, className = '' }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [progress, setProgress] = useState(0)
-  const [reducedMotion, setReducedMotion] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  })
   const [loaded, setLoaded] = useState({})
 
   const markLoaded = (src) => setLoaded((prev) => ({ ...prev, [src]: true }))
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setReducedMotion(mq.matches)
     const onChange = () => setReducedMotion(mq.matches)
     mq.addEventListener('change', onChange)
     return () => mq.removeEventListener('change', onChange)

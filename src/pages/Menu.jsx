@@ -1,9 +1,9 @@
 import { useState, lazy, Suspense } from 'react'
-import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { PAGES } from '../config/seo'
 import SectionHeader from '../components/SectionHeader'
+import { reserveTableWhatsAppUrl } from '../utils/whatsapp'
 
 const Gallery = lazy(() => import('../components/Gallery'))
 
@@ -221,9 +221,14 @@ const Menu = () => {
         <div className="container menu-cta__inner">
           <p>Pair your meal with our signature cocktails &amp; skyline views.</p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-            <Link to="/contact" className="btn btn--primary btn--shimmer">
+            <a
+              href={reserveTableWhatsAppUrl}
+              className="btn btn--primary btn--shimmer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Reserve Your Table
-            </Link>
+            </a>
           </motion.div>
         </div>
       </motion.section>

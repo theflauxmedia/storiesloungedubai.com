@@ -28,16 +28,6 @@ export const galleryCategories = [
 
 export const galleryImages = [
   {
-    "id": "events/001.webp",
-    "category": "events",
-    "categoryLabel": "Events",
-    "file": "001.webp",
-    "src": "/images/events/001.webp",
-    "alt": "Events at Stories Lounge Dubai",
-    "width": 471,
-    "height": 824
-  },
-  {
     "id": "events/002.webp",
     "category": "events",
     "categoryLabel": "Events",
@@ -136,26 +126,6 @@ export const galleryImages = [
     "alt": "Events at Stories Lounge Dubai",
     "width": 462,
     "height": 686
-  },
-  {
-    "id": "events/012.webp",
-    "category": "events",
-    "categoryLabel": "Events",
-    "file": "012.webp",
-    "src": "/images/events/012.webp",
-    "alt": "Events at Stories Lounge Dubai",
-    "width": 462,
-    "height": 704
-  },
-  {
-    "id": "events/013.webp",
-    "category": "events",
-    "categoryLabel": "Events",
-    "file": "013.webp",
-    "src": "/images/events/013.webp",
-    "alt": "Events at Stories Lounge Dubai",
-    "width": 462,
-    "height": 704
   },
   {
     "id": "events/014.webp",
@@ -506,6 +476,16 @@ export const galleryImages = [
     "alt": "Cocktails & Mocktails at Stories Lounge Dubai",
     "width": 1400,
     "height": 2100
+  },
+  {
+    "id": "mocktails and cocktails /goldsouk.webp",
+    "category": "mocktails and cocktails ",
+    "categoryLabel": "Cocktails & Mocktails",
+    "file": "goldsouk.webp",
+    "src": "/images/mocktails%20and%20cocktails%20/goldsouk.webp",
+    "alt": "Cocktails & Mocktails at Stories Lounge Dubai",
+    "width": 400,
+    "height": 600
   },
   {
     "id": "mocktails and cocktails /Hammer.webp",
@@ -1112,16 +1092,6 @@ export const galleryImages = [
 export const imagesByCategory = {
   "events": [
     {
-      "id": "events/001.webp",
-      "category": "events",
-      "categoryLabel": "Events",
-      "file": "001.webp",
-      "src": "/images/events/001.webp",
-      "alt": "Events at Stories Lounge Dubai",
-      "width": 471,
-      "height": 824
-    },
-    {
       "id": "events/002.webp",
       "category": "events",
       "categoryLabel": "Events",
@@ -1220,26 +1190,6 @@ export const imagesByCategory = {
       "alt": "Events at Stories Lounge Dubai",
       "width": 462,
       "height": 686
-    },
-    {
-      "id": "events/012.webp",
-      "category": "events",
-      "categoryLabel": "Events",
-      "file": "012.webp",
-      "src": "/images/events/012.webp",
-      "alt": "Events at Stories Lounge Dubai",
-      "width": 462,
-      "height": 704
-    },
-    {
-      "id": "events/013.webp",
-      "category": "events",
-      "categoryLabel": "Events",
-      "file": "013.webp",
-      "src": "/images/events/013.webp",
-      "alt": "Events at Stories Lounge Dubai",
-      "width": 462,
-      "height": 704
     },
     {
       "id": "events/014.webp",
@@ -1594,6 +1544,16 @@ export const imagesByCategory = {
       "alt": "Cocktails & Mocktails at Stories Lounge Dubai",
       "width": 1400,
       "height": 2100
+    },
+    {
+      "id": "mocktails and cocktails /goldsouk.webp",
+      "category": "mocktails and cocktails ",
+      "categoryLabel": "Cocktails & Mocktails",
+      "file": "goldsouk.webp",
+      "src": "/images/mocktails%20and%20cocktails%20/goldsouk.webp",
+      "alt": "Cocktails & Mocktails at Stories Lounge Dubai",
+      "width": 400,
+      "height": 600
     },
     {
       "id": "mocktails and cocktails /Hammer.webp",

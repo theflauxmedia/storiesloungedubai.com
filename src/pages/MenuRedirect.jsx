@@ -6,7 +6,12 @@ const MenuRedirect = () => {
     window.location.replace(SITE.digitalMenu)
   }, [])
 
-  return null
+  return (
+    <main className="menu-redirect">
+      <p>Opening the digital menu…</p>
+      <a href={SITE.digitalMenu}>Continue to menu</a>
+    </main>
+  )
 }
 
 export default MenuRedirect

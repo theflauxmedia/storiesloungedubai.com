@@ -8,7 +8,14 @@ export const SITE = {
   phone: '+971505499410',
   phoneDisplay: '+971 50 549 9410',
   phoneWhatsApp: '971505499410',
-  instagram: 'https://www.instagram.com/storieslounge.dubai/?hl=en',
+  instagram: 'https://www.instagram.com/storieslounge.dubai/',
+  facebook: 'https://www.facebook.com/profile.php?id=61572428356261',
+  tiktok: 'https://www.tiktok.com/@drs.dxb',
+  snapchat: 'https://snapchat.com/t/uxRXz5FO',
+  mapsEmbed:
+    'https://www.google.com/maps?q=Concorde+Creek+View+Hotel,+Al+Fahidi,+Dubai&z=16&output=embed',
+  mapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=Concorde+Creek+View+Hotel+Al+Fahidi+Dubai',
   digitalMenu: 'https://qr.mydigimenu.com/b9b1e898-7b11-4d3f-928a-352e20247cc8',
   email: 'info@storiesloungedubai.com',
   area: 'Al Fahidi',
@@ -87,23 +94,23 @@ export const PAGES = {
       'Explore Stories Lounge Dubai in photos — Rooftop Creekview ambience, signature dishes, cocktails, shisha, and wings above Dubai Creek in Al Fahidi.',
     keywords:
       'Stories Lounge gallery, Dubai Rooftop Creekview photos, lounge ambience Dubai, food photos Dubai creek, shisha lounge Dubai',
-    ogImage: '/og/about.jpg',
+    ogImage: '/og/home.jpg',
   },
   events: {
     path: '/events',
-    title: 'Events, DJ Nights & Private Bookings Dubai',
+    title: 'Events, DJ Nights, Housie Nights & Private Bookings Dubai',
     description:
-      'Events at Stories Lounge Dubai — weekly DJ nights, quiz evenings, Bollywood sessions, festive parties & private Rooftop Creekview bookings for birthdays, corporate events & celebrations in Al Fahidi.',
+      'Events at Stories Lounge Dubai — weekly DJ nights, quiz evenings, Bollywood & Housie nights, festive parties & private Rooftop Creekview bookings for birthdays, corporate events & celebrations in Al Fahidi.',
     keywords:
-      'Dubai lounge events, DJ nights Dubai, private Rooftop Creekview party Dubai, corporate event Dubai, birthday venue Dubai Rooftop Creekview, themed nights Dubai',
+      'Dubai lounge events, DJ nights Dubai, Housie nights Dubai, private Rooftop Creekview party Dubai, corporate event Dubai, birthday venue Dubai Rooftop Creekview, themed nights Dubai',
     ogImage: '/og/events.jpg',
   },
   contact: {
     path: '/contact',
     title: 'Reservations & Contact — Book a Table Dubai',
-    description: `Reserve a table at Stories Lounge Dubai. ${SITE.addressDisplay}. Open daily 12 PM–4 AM. Call ${SITE.phoneDisplay}. Easy online reservation.`,
+    description: `Reserve a table at Stories Lounge Dubai via WhatsApp or call. ${SITE.addressDisplay}. Open daily 12 PM–4 AM. Call ${SITE.phoneDisplay}.`,
     keywords:
-      'reserve table Dubai, Stories Lounge contact, Al Fahidi restaurant booking, Rooftop Creekview reservation Dubai, Concorde Creek View Hotel dining',
+      'reserve table Dubai, Stories Lounge contact, WhatsApp booking Dubai lounge, Al Fahidi restaurant booking, Rooftop Creekview reservation Dubai, Concorde Creek View Hotel dining',
     ogImage: '/og/contact.jpg',
   },
 }
@@ -125,7 +132,7 @@ export const FAQ_ITEMS = [
   {
     question: 'Can I book a private event or party?',
     answer:
-      'Yes. We host birthdays, corporate gatherings, anniversaries and private parties with custom menus. Submit an enquiry on our Events page.',
+      'Yes. We host birthdays, corporate gatherings, anniversaries and private parties with custom menus. Enquire via WhatsApp on our Events page.',
   },
   {
     question: 'Does Stories Lounge have shisha?',
@@ -134,6 +141,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'How do I reserve a table?',
-    answer: `Reserve online via our Contact page or call ${SITE.phoneDisplay}. Walk-ins welcome subject to availability.`,
+    answer: `Tap Reserve a Table to message us on WhatsApp, or call ${SITE.phoneDisplay}. Walk-ins welcome subject to availability.`,
   },
 ]

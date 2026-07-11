@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { SITE, FAQ_ITEMS } from '../config/seo'
+import { socialSameAs } from '../config/social'
 
 const buildSchemaGraph = () => ({
   '@context': 'https://schema.org',
@@ -25,11 +26,7 @@ const buildSchemaGraph = () => ({
         addressRegion: SITE.address.region,
         addressCountry: SITE.address.country,
       },
-      sameAs: [
-        'https://instagram.com',
-        'https://facebook.com',
-        'https://tiktok.com',
-      ],
+      sameAs: socialSameAs,
     },
     {
       '@type': 'WebSite',
@@ -44,7 +41,7 @@ const buildSchemaGraph = () => ({
         '@type': 'ReserveAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: `${SITE.url}/contact`,
+          urlTemplate: `https://wa.me/${SITE.phoneWhatsApp}?text=${encodeURIComponent('Hello Stories Lounge Dubai, I would like to reserve a table.')}`,
           actionPlatform: [
             'http://schema.org/DesktopWebPlatform',
             'http://schema.org/MobileWebPlatform',
@@ -67,7 +64,7 @@ const buildSchemaGraph = () => ({
       telephone: SITE.phone,
       email: SITE.email,
       image: `${SITE.url}${SITE.ogImage}`,
-      logo: `${SITE.url}${SITE.ogImage}`,
+      logo: `${SITE.url}/logo.png`,
       priceRange: '$$$',
       servesCuisine: [
         'Indian',
@@ -85,7 +82,7 @@ const buildSchemaGraph = () => ({
         streetAddress: SITE.address.street,
         addressLocality: SITE.address.locality,
         addressRegion: SITE.address.region,
-        addressCountry: SITE.address.countryName,
+        addressCountry: SITE.address.country,
       },
       geo: {
         '@type': 'GeoCoordinates',
@@ -105,6 +102,20 @@ const buildSchemaGraph = () => ({
             'Sunday',
           ],
           opens: '12:00',
+          closes: '23:59',
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: [
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday',
+          ],
+          opens: '00:00',
           closes: '04:00',
         },
       ],
@@ -130,11 +141,7 @@ const buildSchemaGraph = () => ({
           addressCountry: 'AE',
         },
       },
-      sameAs: [
-        'https://instagram.com',
-        'https://facebook.com',
-        'https://tiktok.com',
-      ],
+      sameAs: socialSameAs,
     },
     {
       '@type': 'FAQPage',

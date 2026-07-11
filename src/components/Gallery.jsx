@@ -44,6 +44,7 @@ function GalleryTile({ item, onOpen }) {
       type="button"
       className="gallery__item"
       onClick={() => onOpen(item)}
+      aria-label={`View ${item.alt || item.categoryLabel || 'gallery image'}`}
     >
       <div className="gallery__item-media" style={getTileAspectStyle(item)}>
         {shouldLoad ? (
@@ -120,6 +121,11 @@ const Gallery = ({
   const displayed = limit ? filtered.slice(0, limit) : filtered.slice(0, visibleCount)
   const hasMore = !limit && visibleCount < filtered.length
 
+  const handleFilterChange = (key) => {
+    setActiveFilter(key)
+    setVisibleCount(PAGE_SIZE)
+  }
+
   const masonryColumns = useMemo(
     () => buildMasonryLayout(displayed, columnCount),
     [displayed, columnCount]
@@ -139,10 +145,6 @@ const Gallery = ({
     ),
     [columnCount]
   )
-
-  useEffect(() => {
-    setVisibleCount(PAGE_SIZE)
-  }, [activeFilter])
 
   useEffect(() => {
     if (lightboxIndex === null) return undefined
@@ -213,7 +215,7 @@ const Gallery = ({
               role="tab"
               aria-selected={activeFilter === tab.key}
               className={`gallery__filter${activeFilter === tab.key ? ' gallery__filter--active' : ''}`}
-              onClick={() => setActiveFilter(tab.key)}
+              onClick={() => handleFilterChange(tab.key)}
             >
               {tab.label}
             </button>
