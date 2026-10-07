@@ -32,11 +32,12 @@ const GalleryPage = () => {
       >
         <div className="container">
           <span className="section-header__label page-eyebrow">Visual Journey</span>
-          <h1>Gallery</h1>
+          <h1>Gallery: Rooftop Views Over Dubai Creek</h1>
           <span className="section-header__divider" aria-hidden="true" />
           <p className="gallery-page__intro-text">
-            Rooftop Creekview ambience, signature dishes, handcrafted cocktails, shisha, and evenings above
-            Dubai Creek — explore the full Stories Lounge experience.
+            Sunset dining, the Dubai night view from our rooftop, signature dishes, handcrafted
+            cocktails and shisha — see why guests call Stories one of the best restaurants with a
+            view in Bur Dubai.
           </p>
         </div>
       </motion.section>

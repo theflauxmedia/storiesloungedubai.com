@@ -75,13 +75,13 @@ export const usePageMeta = ({
     upsertMeta('property', 'og:image:type', SITE.ogImageType)
     upsertMeta('property', 'og:image:width', String(SITE.ogImageWidth))
     upsertMeta('property', 'og:image:height', String(SITE.ogImageHeight))
-    upsertMeta('property', 'og:image:alt', `${SITE.name} — Premium Rooftop Creekview dining in ${SITE.area}, Dubai`)
+    upsertMeta('property', 'og:image:alt', `${SITE.name} — rooftop restaurant with Dubai Creek views in ${SITE.area}, Bur Dubai`)
 
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('name', 'twitter:title', fullTitle)
     upsertMeta('name', 'twitter:description', description)
     upsertMeta('name', 'twitter:image', ogImageUrl)
-    upsertMeta('name', 'twitter:image:alt', `${SITE.name} — Premium Rooftop Creekview dining in ${SITE.area}, Dubai`)
+    upsertMeta('name', 'twitter:image:alt', `${SITE.name} — rooftop restaurant with Dubai Creek views in ${SITE.area}, Bur Dubai`)
 
     if (breadcrumb?.length) {
       const breadcrumbSchema = {

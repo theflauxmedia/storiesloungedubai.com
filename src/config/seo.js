@@ -1,4 +1,4 @@
-/** Central SEO config — Dubai Rooftop Creekview lounge niche keywords */
+/** Central SEO config — rooftop restaurant, Al Fahidi / Bur Dubai keywords */
 export const SITE = {
   url: 'https://storiesloungedubai.com',
   name: 'Stories Lounge Dubai',
@@ -37,80 +37,80 @@ export const SITE = {
   ogImageType: 'image/jpeg',
   keywords: [
     'Stories Lounge Dubai',
-    'Rooftop Creekview restaurant Dubai',
-    'Rooftop Creekview lounge Dubai',
-    'Al Fahidi restaurant',
-    'Bur Dubai Rooftop Creekview bar',
+    'rooftop restaurant Dubai',
+    'rooftop restaurant Bur Dubai',
+    'rooftop restaurant Al Fahidi',
+    'rooftop restaurant near Dubai Creek',
     'Dubai Creek view restaurant',
-    'Concorde Creek View Hotel restaurant',
-    'best Rooftop Creekview dining Dubai',
-    'lounge bar Dubai',
-    'shisha lounge Dubai',
-    'Dubai nightlife lounge',
-    'fusion restaurant Dubai',
-    'private events Rooftop Creekview Dubai',
-    'romantic dinner Dubai Rooftop Creekview',
-    'DJ nights Dubai lounge',
-    'happy hour Dubai Rooftop Creekview',
-    'Indian fusion restaurant Dubai',
-    'late night dining Dubai',
-    'Dubai skyline restaurant',
-    'reserve table Dubai lounge',
+    'rooftop lounge Dubai',
+    'rooftop bar Bur Dubai',
+    'rooftop dining Dubai',
+    'restaurants in Meena Bazaar',
+    'Indian restaurants in Bur Dubai',
+    'best restaurants in Al Fahidi',
+    'romantic dinner Dubai',
+    'date night rooftop Dubai',
+    'live music in Bur Dubai',
+    'DJ nights in Bur Dubai',
+    'shisha lounges in Bur Dubai',
+    'cocktail bar Al Fahidi',
+    'rooftop happy hour Dubai',
+    'late night restaurants in Bur Dubai',
   ].join(', '),
 }
 
 export const PAGES = {
   home: {
     path: '/',
-    title: 'Rooftop Creekview Restaurant & Lounge Bar Dubai | Creek Views',
+    title: 'Stories Lounge Dubai | Rooftop Restaurant & Bar in Bur Dubai',
     description:
-      'Stories Lounge Dubai — premium Rooftop Creekview dining & lounge atop Concorde Creek View Hotel, Al Fahidi. Global fusion food, cocktails, shisha, DJ nights & Dubai Creek skyline views. Reserve your table.',
+      'Rooftop restaurant & lounge in Al Fahidi, Bur Dubai with Dubai Creek views. Indian & global fusion food, cocktails, shisha, live music & DJ nights. Book now.',
     keywords:
-      'Rooftop Creekview restaurant Dubai, Stories Lounge, Al Fahidi dining, Dubai Creek views, lounge bar Dubai, shisha Dubai, reserve table Dubai',
+      'rooftop restaurant Dubai, rooftop restaurant Bur Dubai, rooftop restaurant Al Fahidi, Dubai Creek view restaurant, rooftop lounge Dubai, rooftop bar Bur Dubai, restaurants in Meena Bazaar, best restaurants in Bur Dubai, Indian restaurants in Bur Dubai, Stories Lounge Dubai',
     ogImage: '/og/home.jpg',
   },
   about: {
     path: '/about',
-    title: 'About Us — Rooftop Creekview Lounge & Dining Experience Dubai',
+    title: 'About Stories Lounge Dubai | Rooftop Bar & Cafe, Al Fahidi',
     description:
-      'Our story at Stories Lounge Dubai — a Rooftop Creekview destination in Al Fahidi blending global cuisine, music, creek views & Dubai nightlife. Day-to-night social dining above Concorde Creek View Hotel.',
+      'Stories Lounge Bar & Cafe sits atop Concorde Creek View Hotel in Al Fahidi, Bur Dubai — a rooftop restaurant and lounge serving Indian, Asian & Continental food.',
     keywords:
-      'about Stories Lounge Dubai, Rooftop Creekview lounge story, Al Fahidi nightlife, Dubai social dining, creek view lounge',
+      'Stories Lounge bar and cafe Dubai, Stories Lounge Concorde Creek View Hotel, Stories Lounge Al Fahidi, Stories Lounge Bur Dubai, restaurant and lounge Dubai, multicuisine restaurants in Bur Dubai, global fusion restaurants in Dubai, North Indian food in Bur Dubai, Indo Chinese food in Dubai',
     ogImage: '/og/about.jpg',
   },
   menu: {
     path: '/menu',
-    title: 'Menu — Fusion Food, Cocktails & Shisha Dubai',
+    title: 'Menu — Indian, Asian & Continental Food in Bur Dubai',
     description:
-      'Stories Lounge Dubai menu: Indian & Asian fusion starters, signature mains, vegetarian dishes, desserts, craft cocktails & premium shisha. Rooftop Creekview dining in Al Fahidi, Dubai.',
+      'Stories Lounge Dubai menu: North & South Indian, Indo-Chinese, Continental, pizza, pasta, seafood, cocktails & shisha at our rooftop restaurant in Al Fahidi.',
     keywords:
-      'Stories Lounge menu Dubai, fusion menu Dubai, Rooftop Creekview food Dubai, cocktails Dubai creek, shisha menu Dubai, vegetarian Dubai restaurant',
+      'Stories Lounge Dubai menu, Indian restaurants in Bur Dubai, Indo Chinese food in Bur Dubai, Continental food in Dubai, vegetarian food in Bur Dubai, seafood in Bur Dubai, cocktail bars in Bur Dubai',
     ogImage: '/og/menu.jpg',
   },
   gallery: {
     path: '/gallery',
-    title: 'Gallery — Rooftop Creekview Ambience, Food & Cocktails Dubai',
+    title: 'Rooftop Restaurant Photos, Dubai Creek',
     description:
-      'Explore Stories Lounge Dubai in photos — Rooftop Creekview ambience, signature dishes, cocktails, shisha, and wings above Dubai Creek in Al Fahidi.',
+      'Photos of our rooftop restaurant in Al Fahidi — Dubai Creek views at sunset and night, signature dishes, cocktails and shisha at Stories Lounge Dubai.',
     keywords:
-      'Stories Lounge gallery, Dubai Rooftop Creekview photos, lounge ambience Dubai, food photos Dubai creek, shisha lounge Dubai',
+      'Stories Lounge Dubai rooftop, Stories Lounge Dubai Creek view, restaurants with a view in Dubai, dinner with view Dubai, Dubai night view restaurants, sunset dining in Dubai Creek, rooftop ambience restaurant Dubai',
     ogImage: '/og/home.jpg',
   },
   events: {
     path: '/events',
-    title: 'Events, DJ Nights, Housie Nights & Private Bookings Dubai',
+    title: 'Rooftop Events & DJ Nights, Bur Dubai',
     description:
-      'Events at Stories Lounge Dubai — weekly DJ nights, quiz evenings, Bollywood & Housie nights, festive parties & private Rooftop Creekview bookings for birthdays, corporate events & celebrations in Al Fahidi.',
+      'DJ, Bollywood, quiz & Housie nights plus live music at our rooftop lounge in Bur Dubai. Book birthdays, corporate dinners & private events in Al Fahidi.',
     keywords:
-      'Dubai lounge events, DJ nights Dubai, Housie nights Dubai, private Rooftop Creekview party Dubai, corporate event Dubai, birthday venue Dubai Rooftop Creekview, themed nights Dubai',
+      'Stories Lounge Dubai events, DJ nights in Bur Dubai, Bollywood nights in Dubai, quiz nights in Bur Dubai, Housie nights in Dubai, live music in Bur Dubai, rooftop events in Dubai, rooftop party venue Dubai, corporate dinner rooftop Dubai, birthday celebration rooftop Dubai, private event rooftop Dubai',
     ogImage: '/og/events.jpg',
   },
   contact: {
     path: '/contact',
-    title: 'Reservations & Contact — Book a Table Dubai',
-    description: `Reserve a table at Stories Lounge Dubai via WhatsApp or call. ${SITE.addressDisplay}. Open daily 12 PM–4 AM. Call ${SITE.phoneDisplay}.`,
+    title: 'Rooftop Restaurant Booking, Al Fahidi',
+    description: `Reserve a rooftop table at Stories Lounge Dubai, Concorde Creek View Hotel, Al Fahidi, Bur Dubai. Open daily 12 PM–4 AM. WhatsApp or call ${SITE.phoneDisplay}.`,
     keywords:
-      'reserve table Dubai, Stories Lounge contact, WhatsApp booking Dubai lounge, Al Fahidi restaurant booking, Rooftop Creekview reservation Dubai, Concorde Creek View Hotel dining',
+      'Stories Lounge Dubai reservations, rooftop restaurant booking Dubai, rooftop bar reservation Dubai, Stories Lounge Meena Bazaar, rooftop restaurant Al Fahidi, late night restaurants in Bur Dubai',
     ogImage: '/og/contact.jpg',
   },
 }
@@ -118,26 +118,37 @@ export const PAGES = {
 export const FAQ_ITEMS = [
   {
     question: 'Where is Stories Lounge Dubai located?',
-    answer: `Stories Lounge is at Rooftop Creekview atop Concorde Creek View Hotel at ${SITE.addressDisplay} — with panoramic Dubai Creek and city skyline views.`,
+    answer: `Stories Lounge is a rooftop restaurant and lounge on top of Concorde Creek View Hotel in Al Fahidi, Bur Dubai — a short walk from Meena Bazaar, with views over Dubai Creek. Address: ${SITE.addressDisplay}.`,
   },
   {
     question: 'What are the opening hours?',
-    answer: 'We are open daily from 12:00 PM until 4:00 AM.',
+    answer:
+      'We are open daily from 12:00 PM until 4:00 AM, so you can come for a rooftop lunch, sunset dinner or a late-night bite in Bur Dubai.',
   },
   {
     question: 'What type of cuisine does Stories Lounge serve?',
     answer:
-      'Our menu features global fusion cuisine — Indian, Asian, Mediterranean and Continental dishes, plus craft cocktails and a premium shisha selection.',
+      'A multicuisine menu: North Indian, South Indian and coastal Indian dishes, Indo-Chinese, Asian, Mediterranean and Continental food including pizza, pasta and seafood, with plenty of vegetarian and non-veg options, cocktails and shisha.',
   },
   {
-    question: 'Can I book a private event or party?',
+    question: 'Is Stories Lounge good for a date night or romantic dinner?',
     answer:
-      'Yes. We host birthdays, corporate gatherings, anniversaries and private parties with custom menus. Enquire via WhatsApp on our Events page.',
+      'Yes. Our rooftop tables overlook Dubai Creek, making it a popular spot for date nights, anniversary dinners and romantic sunset dining in Al Fahidi.',
   },
   {
-    question: 'Does Stories Lounge have shisha?',
+    question: 'Do you have live music and DJ nights?',
     answer:
-      'Yes. We offer a curated shisha menu with premium flavours, ideal for evening social gatherings on our Rooftop Creekview terrace.',
+      'Yes. We host DJ nights, live music and performances, Bollywood nights, quiz nights and Housie nights every week. See our Events page for what is on.',
+  },
+  {
+    question: 'Can I book a private event, birthday or corporate dinner?',
+    answer:
+      'Yes. We host birthday dinners, anniversaries, corporate dinners, team dinners and private rooftop parties with custom menus. Enquire via WhatsApp on our Events page.',
+  },
+  {
+    question: 'Does Stories Lounge have shisha and happy hour?',
+    answer:
+      'Yes. We offer a premium shisha menu and a daily rooftop happy hour with shisha combos, beer bucket offers and bites specials.',
   },
   {
     question: 'How do I reserve a table?',

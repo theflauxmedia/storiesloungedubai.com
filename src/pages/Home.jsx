@@ -13,32 +13,32 @@ const heroWords = ['Stories', 'Lounge']
 
 const experiencePreviewImage = {
   src: '/images/Hero/012.webp',
-  alt: 'Stories Lounge Dubai Rooftop Creekview experience',
+  alt: 'Rooftop dining at Stories Lounge Dubai overlooking Dubai Creek in Al Fahidi',
 }
 
 const brandSnapshot = [
   {
     icon: '◈',
-    title: 'Panoramic Rooftop Creek View',
+    title: 'Rooftop Restaurant with Creek View',
     description:
-      'Enjoy breathtaking creek and city skyline panoramas from our elevated setting.',
+      'Dine with a view over Dubai Creek and the Bur Dubai skyline — one of the few rooftop restaurants in Al Fahidi.',
   },
   {
     icon: '◆',
-    title: 'Global Fusion Menu',
+    title: 'Multicuisine Menu',
     description:
-      'A refined blend of Indian, Asian, Mediterranean & Continental cuisine.',
+      'North & South Indian favourites, Indo-Chinese, Mediterranean and Continental dishes — vegetarian and non-veg, paired with signature cocktails.',
   },
   {
     icon: '✦',
-    title: 'Social Evenings',
+    title: 'Live Music & DJ Nights',
     description:
-      'Enjoy fun-filled evenings with Bollywood Quiz Nights, Housie Nights, and Live Performances every week at Stories.',
+      'Live music in Bur Dubai every week — DJ nights, Bollywood nights, quiz nights, Housie nights and live performances at Stories.',
   },
 ]
 
 const weeklyHighlights = [
-  { name: 'Happy Hours', day: 'Daily', time: 'Sheesha combos, beer bucket offers & bites special' },
+  { name: 'Rooftop Happy Hour', day: 'Daily', time: 'Sheesha combos, beer bucket offers & bites specials' },
   {
     name: 'Themed Nights',
     day: 'Weekly',
@@ -53,7 +53,7 @@ const weeklyHighlights = [
     name: 'Celebratory Stories',
     day: 'Special Occasions',
     time:
-      "From birthdays and anniversaries to date nights and special occasions, celebrate life's memorable moments at Stories.",
+      "From birthday dinners and anniversary dinners to date nights and team dinners, celebrate life's memorable moments on our rooftop.",
   },
 ]
 
@@ -153,9 +153,8 @@ const Home = () => {
           className="hero__content"
           style={isMobile ? undefined : { opacity: heroOpacity }}
         >
-          <p className="hero__eyebrow">Al Fahidi - Dubai - United Arab Emirates</p>
-
           <h1 className="hero__title">
+            <span className="hero__eyebrow">Rooftop Restaurant &amp; Lounge · Al Fahidi, Bur Dubai</span>
             {heroWords.map((word, i) => (
               <motion.span
                 key={word}
@@ -184,8 +183,9 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.8, ease: luxuryEase }}
           >
-            Where curated global flavours, handcrafted cocktails, and stunning skyline
-            views come together to create unforgettable evenings.
+            A rooftop restaurant and bar overlooking Dubai Creek, where curated global
+            flavours, handcrafted cocktails, and live music come together for
+            unforgettable evenings.
           </motion.p>
 
           <motion.div
@@ -285,10 +285,10 @@ const Home = () => {
             <h2 id="experience-heading">An Experience Beyond Dining</h2>
             <span className="section-header__divider section-header__divider--left" aria-hidden="true" />
             <p>
-              Stories Lounge is designed for moments that linger — sunset conversations,
-              celebratory dinners, late-night cocktails, and vibrant social energy. Whether
-              you&apos;re here to unwind or celebrate, every visit becomes a story worth
-              sharing.
+              Stories Lounge is designed for moments that linger — sunset dining by the
+              creek, romantic dinners, birthday celebrations, late-night cocktails, and
+              vibrant social energy. Whether it&apos;s a date night, a friends night out or a
+              corporate dinner, every visit to our rooftop becomes a story worth sharing.
             </p>
             <Link to="/about" className="text-link">
               Explore Our Story
@@ -361,11 +361,46 @@ const Home = () => {
           <SectionHeader
             label="Visual Journey"
             title="The Stories Experience"
-            subtitle="Rooftop Creekview ambience, signature dishes, handcrafted cocktails, and evenings above Dubai Creek."
+            subtitle="Rooftop ambience, signature dishes, handcrafted cocktails, and evenings above Dubai Creek."
             as="h2"
             id="gallery-heading"
           />
           <GalleryPreview />
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="section section--charcoal home-location"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-80px' }}
+        variants={sectionVariants}
+        aria-labelledby="location-heading"
+      >
+        <div className="container seo-copy">
+          <SectionHeader
+            label="Find Us"
+            title="Rooftop Dining in Al Fahidi, Bur Dubai"
+            as="h2"
+            id="location-heading"
+          />
+          <p>
+            Stories Lounge sits on the rooftop of the Concorde Creek View Hotel in Al Fahidi,
+            in the heart of Bur Dubai and a short walk from Meena Bazaar. Our open-air terrace
+            looks out over Dubai Creek, making it one of the best places to eat with a view in
+            old Dubai — from a relaxed rooftop lunch to sunset dinners and the Dubai night view.
+          </p>
+          <p>
+            Whether you&apos;re searching for Indian restaurants in Bur Dubai, a cocktail bar in
+            Al Fahidi, a shisha lounge near Dubai Creek or a late-night restaurant in Bur Dubai,
+            Stories brings it all together under one sky. We&apos;re open daily from 12 PM to 4 AM.
+          </p>
+          <p>
+            <Link to="/contact" className="text-link">
+              Book your rooftop table
+              <span aria-hidden="true">→</span>
+            </Link>
+          </p>
         </div>
       </motion.section>
 
@@ -423,7 +458,8 @@ const Home = () => {
           <h2 id="final-cta-heading">Your Table Awaits</h2>
           <span className="section-header__divider" aria-hidden="true" />
           <p className="final-cta__desc">
-            Join us atop Concorde Creek View for an evening of flavour, music, and skyline views.
+            Join us on the rooftop of Concorde Creek View Hotel for an evening of flavour, music,
+            and Dubai Creek views.
           </p>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <a

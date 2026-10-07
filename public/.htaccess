@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# /menu -> external digital menu (mirrors vercel.json redirect)
+RewriteRule ^menu/?$ https://qr.mydigimenu.com/b9b1e898-7b11-4d3f-928a-352e20247cc8 [R=302,L]
+
+# SPA fallback: serve index.html for any path that isn't a real file or folder
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

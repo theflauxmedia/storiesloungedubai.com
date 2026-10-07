@@ -1,0 +1,12 @@
+---
+description: Keep OPEN_ENDS.md in sync with fixes and newly found gaps for Flaux HQ.
+alwaysApply: true
+---
+
+# Open ends tracker
+
+- This repo has OPEN_ENDS.md tracked by Flaux HQ.
+- When you fix something listed there, tick it (- [x]) in the same change.
+- When you notice a new bug, SEO gap, missing client input or unbuilt feature while working, add it under the right section as "- [ ] text #priority". Don't fix unrelated things without asking.
+- Never rename or remove the section headings.
+- Never put secrets, passwords or API keys in OPEN_ENDS.md.

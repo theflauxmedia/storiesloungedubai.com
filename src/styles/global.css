@@ -2475,3 +2475,34 @@ a.contact-info__value:hover { color: var(--gold-light); }
     padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
   }
 }
+
+/* Eyebrow sits inside the hero H1 on its own row */
+.hero__title .hero__eyebrow {
+  flex-basis: 100%;
+  display: block;
+}
+
+/* Long-form SEO copy blocks */
+.seo-copy {
+  max-width: 760px;
+  text-align: center;
+}
+
+.seo-copy p {
+  color: var(--silver);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.seo-copy h3 {
+  font-family: var(--font-heading);
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.contact-form-wrap__intro {
+  color: var(--silver);
+  margin-bottom: 1.5rem;
+}

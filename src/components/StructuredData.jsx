@@ -34,7 +34,7 @@ const buildSchemaGraph = () => ({
       url: SITE.url,
       name: SITE.name,
       description:
-        `Premium Rooftop Creekview dining, lounge bar and cafe in ${SITE.area}, Dubai with Dubai Creek skyline views.`,
+        `Rooftop restaurant, lounge bar and cafe in ${SITE.area}, Bur Dubai with Dubai Creek views.`,
       publisher: { '@id': `${SITE.url}/#organization` },
       inLanguage: 'en-AE',
       potentialAction: {
@@ -57,9 +57,14 @@ const buildSchemaGraph = () => ({
       '@type': ['Restaurant', 'BarOrPub', 'NightClub'],
       '@id': `${SITE.url}/#restaurant`,
       name: SITE.name,
-      alternateName: ['Stories Lounge', `Stories Lounge ${SITE.area}`],
+      alternateName: [
+        'Stories Lounge',
+        'Stories Lounge Bar and Cafe',
+        `Stories Lounge ${SITE.area}`,
+        'Stories Lounge Bur Dubai',
+      ],
       description:
-        `Rooftop Creekview dining and lounge bar cafe atop Concorde Creek View Hotel in ${SITE.area}, Dubai. Global fusion cuisine, handcrafted cocktails, premium shisha, DJ nights and Dubai Creek skyline views.`,
+        `Rooftop restaurant and lounge bar on top of Concorde Creek View Hotel in ${SITE.area}, Bur Dubai, near Meena Bazaar. North & South Indian, Indo-Chinese, Mediterranean and Continental food, cocktails, shisha, live music, DJ and Bollywood nights with Dubai Creek views.`,
       url: SITE.url,
       telephone: SITE.phone,
       email: SITE.email,
@@ -68,11 +73,15 @@ const buildSchemaGraph = () => ({
       priceRange: '$$$',
       servesCuisine: [
         'Indian',
+        'North Indian',
+        'South Indian',
+        'Indo-Chinese',
         'Asian',
         'Mediterranean',
         'Continental',
+        'Italian',
+        'Seafood',
         'Fusion',
-        'Middle Eastern',
       ],
       menu: SITE.digitalMenu,
       acceptsReservations: true,
@@ -120,21 +129,24 @@ const buildSchemaGraph = () => ({
         },
       ],
       amenityFeature: [
-        { '@type': 'LocationFeatureSpecification', name: 'Rooftop Creekview seating', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Skyline view', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'Rooftop seating', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'Outdoor dining', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'Dubai Creek view', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Shisha', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Live music', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'DJ nights', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Private dining', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'Vegetarian options', value: true },
       ],
       keywords:
-        `Rooftop Creekview restaurant Dubai, lounge bar Dubai, ${SITE.area}, Dubai Creek views, shisha Dubai, fusion dining`,
+        'rooftop restaurant Bur Dubai, rooftop bar Al Fahidi, Dubai Creek view restaurant, Indian restaurant Bur Dubai, restaurants in Meena Bazaar, live music Bur Dubai, shisha lounge Dubai',
       parentOrganization: {
         '@type': 'Hotel',
         name: 'Concorde Creek View Hotel',
       },
       isPartOf: {
         '@type': 'Place',
-        name: `${SITE.area}, Dubai`,
+        name: `${SITE.area}, Bur Dubai`,
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Dubai',

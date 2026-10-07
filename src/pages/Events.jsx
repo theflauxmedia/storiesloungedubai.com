@@ -8,14 +8,14 @@ import { eventEnquiryWhatsAppMessage, openWhatsApp } from '../utils/whatsapp'
 
 const eventMeta = [
   { title: 'DJ Nights', index: 0 },
-  { title: 'Quiz & Theme Evenings', index: 4 },
+  { title: 'Bollywood & Quiz Nights', index: 4 },
   { title: 'Festive & Holiday Events', index: 9 },
-  { title: 'Corporate & Social Mixers', index: 14 },
+  { title: 'Corporate Dinners & Parties', index: 14 },
 ]
 
 const eventTypeOptions = [
   'Birthday Celebration',
-  'Corporate Gathering',
+  'Corporate Dinner / Team Dinner',
   'Anniversary',
   'Private Party',
   'Other',
@@ -82,11 +82,12 @@ const Events = () => {
       >
         <motion.div className="container">
           <span className="section-header__label page-eyebrow">Entertainment</span>
-          <h1>Events &amp; Entertainment</h1>
+          <h1>Rooftop Events &amp; Nightlife in Bur Dubai</h1>
           <span className="section-header__divider" aria-hidden="true" />
           <p className="events-header__intro">
-            From weekly themed nights to seasonal celebrations, Stories Lounge is where Dubai
-            comes alive after sunset.
+            From DJ nights and live music to Bollywood, quiz and Housie nights, Stories Lounge is
+            where Al Fahidi comes alive after sunset — weekend nightlife on a rooftop above
+            Dubai Creek.
           </p>
         </motion.div>
       </motion.section>
@@ -119,6 +120,39 @@ const Events = () => {
       )}
 
       <motion.section
+        className="section section--black weekly-nights"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
+      >
+        <div className="container seo-copy">
+          <SectionHeader label="Every Week" title="Live Music, DJ & Themed Nights" as="h2" />
+          <h3>DJ Nights &amp; Live Performances</h3>
+          <p>
+            Our resident DJs and live performers make Stories one of the go-to spots for live
+            music in Bur Dubai — a restaurant with live entertainment where dinner flows into a
+            rooftop night out.
+          </p>
+          <h3>Bollywood Nights</h3>
+          <p>
+            Bollywood nights in Al Fahidi with the hits you know, great food and a crowd that
+            loves to dance.
+          </p>
+          <h3>Quiz Nights &amp; Housie Nights</h3>
+          <p>
+            Gather your friends for quiz nights and Housie nights — a fun group hangout with
+            prizes, cocktails and creek views.
+          </p>
+          <h3>Rooftop Happy Hour</h3>
+          <p>
+            Daily happy hour with shisha combos, beer bucket offers and bites specials — one of
+            the best-value happy hour bars in Bur Dubai.
+          </p>
+        </div>
+      </motion.section>
+
+      <motion.section
         className="section section--purple private-bookings"
         initial="hidden"
         whileInView="visible"
@@ -128,8 +162,8 @@ const Events = () => {
         <motion.div className="container private-bookings__inner">
           <SectionHeader
             label="Private Events"
-            title="Host Your Story With Us"
-            subtitle="Celebrate birthdays, corporate gatherings, anniversaries, or private parties in a stylish Rooftop Creekview setting with custom menus and personalized service."
+            title="Private Events & Rooftop Parties"
+            subtitle="Celebrate birthdays, anniversary dinners, corporate dinners, team dinners or private parties at our rooftop party venue in Bur Dubai — with custom menus, group dining packages and personalized service."
             as="h2"
           />
         </motion.div>

@@ -83,8 +83,12 @@ const Contact = () => {
         <div className="container contact-main__grid">
           <div className="contact-form-wrap">
             <span className="section-header__label page-eyebrow">Book a Table</span>
-            <h1>Reserve Your Table</h1>
+            <h1>Reserve Your Rooftop Table</h1>
             <span className="section-header__divider section-header__divider--left" aria-hidden="true" />
+            <p className="contact-form-wrap__intro">
+              Book a table at our rooftop restaurant in Al Fahidi, Bur Dubai — for a date night,
+              birthday dinner, business lunch or group dinner with Dubai Creek views.
+            </p>
             <form className="reservation-form" onSubmit={handleSubmit}>
                 <motion.div className="form-group">
                   <label htmlFor="res-name">Name</label>
@@ -202,7 +206,7 @@ const Contact = () => {
         aria-labelledby="faq-heading"
       >
         <div className="container">
-          <SectionHeader label="Dubai" title="Frequently Asked Questions" as="h2" id="faq-heading" />
+          <SectionHeader label="Good to Know" title="Frequently Asked Questions" as="h2" id="faq-heading" />
           <div className="faq-list">
             {FAQ_ITEMS.map((item) => (
               <details key={item.question} className="faq-item">
